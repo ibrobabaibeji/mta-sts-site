@@ -1,0 +1,21 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/.well-known/*"]
+  },
+  "routes": [
+    {
+      "route": "/.well-known/*",
+      "headers": {
+        "Cache-Control": "public, max-age=604800, immutable",
+        "X-Content-Type-Options": "nosniff"
+      }
+    }
+  ],
+  "globalHeaders": {
+    "Strict-Transport-Security": "max-age=31557600; includeSubDomains"
+  },
+  "mimeTypes": {
+    ".txt": "text/plain"
+  }
+}
